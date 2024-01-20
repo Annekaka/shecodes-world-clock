@@ -5,38 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World clock</title>
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
   </head>
   <body>
     <div id="container">
       <h1>World clock</h1>
       <select name="" id="countries">
         <option value="">Select a city</option>
-        <option value="Europe/Paris">Paris 🇫🇷</option>
-        <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
-        <option value="Australia/Sydney">Sydney 🇦🇺</option>
+        <option value="current">Current location</option>
+        <option value="America/Montserrat">Montserrat</option>
+        <option value="Arctic/Longyearbyen">Svalbard</option>
+        <option value="Asia/Seoul">Seoul</option>
       </select>
-      <div class="city">
-        <div class="left">
-          <h2>Paris 🇫🇷</h2>
-          <div class="date">Aug 15th 2022</div>
+      <div id="cities">
+        <div class="city" id="oslo">
+          <div>
+            <h2>Oslo</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time">1:45:15 <small>AM</small></div>
-      </div>
 
-      <div class="city">
-        <div class="left">
-          <h2>Tokyo 🇯🇵</h2>
-          <div class="date">Aug 15th 2022</div>
+        <div class="city" id="tokyo">
+          <div>
+            <h2>Tokyo</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time">1:45:15 <small>AM</small></div>
-      </div>
 
-      <div class="city">
-        <div class="left">
-          <h2>Sydney 🇦🇺</h2>
-          <div class="date">Aug 15th 2022</div>
+        <div class="city" id="new_york">
+          <div>
+            <h2>New York</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time">1:45:15 <small>AM</small></div>
       </div>
     </div>
     <footer>
